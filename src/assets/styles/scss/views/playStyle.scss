@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+$primary: #3e160c;
+$secondary: #42582a;
+$lightSecondary: #637750;
+$gray: #4d5b5b;
+$heavyPrimary: #2d1907;
+$white: #fbf9fa;
+$black: #161616;
+
+.play-container {
+  background-color: $primary;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-modal-container {
+  background-color: $lightSecondary;
+  width: 90vw;
+  height: 90vh;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  //   background-image: url("../../../images/fnl.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.question-text {
+  font-family: "Quicksand";
+  font-weight: 900;
+  font-size: 2.3em;
+  margin-bottom: 1.5em;
+  color: $white;
+  text-transform: uppercase;
+}
+.answer-button {
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 1em;
+  border-radius: 30px;
+  transition: transform 0.2s;
+}
+.answer-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+.answer-text {
+  font-family: "Quicksand";
+  font-size: 2em;
+  color: $white;
+}

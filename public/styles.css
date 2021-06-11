@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+*:focus {
+  outline: none;
+}
+body {
+  background-color: white;
+  overflow-x: hidden;
+}
+div {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

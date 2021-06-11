@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+$primary: #3e160c;
+$secondary: #42582a;
+$lightSecondary: #637750;
+$gray: #4d5b5b;
+$heavyPrimary: #2d1907;
+$white: #fbf9fa;
+$black: #161616;
+
+.welcome-container {
+  background-color: $primary;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoTag {
+  width: 30em;
+  height: 30em;
+  animation: zoominvid 1s, fadein 2s;
+}
+
+.welcome-modal-container {
+  background-color: $lightSecondary;
+  width: 70em;
+  height: 50em;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: zoomin 1s;
+  flex-direction: column;
+}
+
+.welcome-modal-title-text {
+  font-size: 2.5em;
+  font-family: "Quicksand";
+  font-weight: 500;
+  color: $white;
+  animation: fadein 1s, titlezoomin 1s;
+}
+
+.welcome-modal-title-sub-text {
+  font-size: 1.8em;
+  font-family: "Quicksand";
+  font-weight: 100;
+  color: $white;
+  text-align: center;
+  max-width: 90%;
+  animation: fadein 1s, subtitlezoomin 1s;
+}
+
+.button-start {
+  padding: 0.2em 2em 0.2em 2em;
+  font-size: 2.5em;
+  font-family: "Quicksand";
+  font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 1em;
+  background-color: $heavyPrimary;
+  color: $white;
+  transition: transform 0.2s;
+  animation: fadein 2s;
+}
+
+.button-start:hover {
+  transform: scale(1.1);
+  background-color: $secondary;
+  transition: transform 0.2s;
+}
+
+@keyframes scalein {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes titlezoomin {
+  from {
+    font-size: 0em;
+  }
+  to {
+    font-size: 2.5em;
+  }
+}
+
+@keyframes subtitlezoomin {
+  from {
+    font-size: 0em;
+  }
+  to {
+    font-size: 1.8em;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomin {
+  from {
+    width: 0vw;
+    height: 0vh;
+  }
+  to {
+    width: 70em;
+    height: 50em;
+  }
+}
+
+@keyframes zoominvid {
+  from {
+    width: 0vw;
+    height: 0vh;
+  }
+  to {
+    width: 30em;
+    height: 30em;
+  }
+}
