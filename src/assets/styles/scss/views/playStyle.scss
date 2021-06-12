@@ -90,6 +90,7 @@ $black: #161616;
     border-radius: 100%;
   }
   .character-description-text {
+    white-space: pre-line;
     font-family: "Quicksand";
     font-size: 0.9em;
     color: $white;
@@ -217,6 +218,7 @@ $black: #161616;
     margin-right: 2rem;
   }
   .character-description-text {
+    white-space: pre-line;
     font-family: "Quicksand";
     font-size: 1em;
     color: $white;
@@ -348,6 +350,7 @@ $black: #161616;
     margin-right: 2rem;
   }
   .character-description-text {
+    white-space: pre-line;
     font-family: "Quicksand";
     font-size: 1.5em;
     color: $white;

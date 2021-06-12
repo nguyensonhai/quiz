@@ -70,7 +70,7 @@ export default class Play extends React.Component {
       this.getResult();
       setTimeout(() => {
         this.setState({ isResultVisible: true });
-      }, 1000);
+      }, 1500);
       this.setState({ index: index + 1 });
     }
   };
@@ -173,9 +173,9 @@ export default class Play extends React.Component {
                     Bạn là {finalResult.name}
                   </span>
                 </div>
-                <span className="character-description-text">
-                  "{finalResult.description}"
-                </span>
+                <p className="character-description-text">
+                  {finalResult.description}
+                </p>
               </div>
             </div>
             <a href="/" className="button-restart">
@@ -184,7 +184,7 @@ export default class Play extends React.Component {
           </div>
         ) : (
           <div div className="character-modal-container">
-            <video className="videoTag" autoPlay loop muted>
+            <video className="videoResult" autoPlay loop muted>
               <source src={sample} type="video/mp4" />
             </video>
           </div>
