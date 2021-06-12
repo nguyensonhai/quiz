@@ -164,7 +164,7 @@ export default class Play extends React.Component {
             )}
           </div>
         ) : this.state.isResultVisible ? (
-          <div className="character-modal-container">
+          <div className="play-modal-container">
             <div className="character-info-container">
               <img src={finalResult?.img} className="characterImg" alt="" />
               <div className="character-text-container">
@@ -183,7 +183,7 @@ export default class Play extends React.Component {
             </a>
           </div>
         ) : (
-          <div div className="character-modal-container">
+          <div div className="play-modal-container">
             <video className="videoResult" autoPlay loop muted>
               <source src={sample} type="video/mp4" />
             </video>

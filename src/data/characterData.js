@@ -14,7 +14,7 @@ import Hunter from "assets/images/characters/Hunter.jpg";
 import Mysterious from "assets/images/characters/Mysterious.jpg";
 export const characterData = {
   MAGGIE: {
-    name: "Maggie",
+    name: "Maggie Carleton",
     img: Maggie,
     description:
       "Maggie được biết đến là một cô gái không nói câu gì với bất cứ ai để che dấu nỗi đau quá khứ kinh hoàng của mình. Lên lớp 11, cô chuyển đến sống cùng anh họ của mình là Brady. Cô gặp West – người cần tới sự giúp đỡ của cô để vượt qua thời gian đen tối của chính cậu. Dần dần, cô đã bước ra khỏi cái bóng của chính mình để mạnh mẽ hơn, dũng cảm hơn, sẵn sàng đương đầu với mọi thử thách cuộc sống đem lại cho mình.\n\nNhận được kết quả này, bạn quả là người mạnh mẽ và độc lập. Bạn không thích làm phiền tới ai và sẽ làm mọi cách để không trở thành tâm điểm của bất cứ chuyện gì. Bình an là điều bạn mong muốn nhất.\n\nCùng gặp Maggie trong “Chờ tới đêm thứ sáu” và sự xuất hiện của cô trong các tập “Under the lights” và “After the game” nhé!",
