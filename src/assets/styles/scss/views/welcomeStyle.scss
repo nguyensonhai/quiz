@@ -2,7 +2,7 @@
 
 $primary: #3e160c;
 $secondary: #42582a;
-$lightSecondary: #6f815a;
+$lightSecondary: #637750;
 $gray: #4d5b5b;
 $heavyPrimary: #2d1907;
 $white: #fbf9fa;
@@ -22,7 +22,6 @@ $black: #161616;
   .videoTag {
     width: 80vw;
     height: 80vw;
-    background-color: #637750;
   }
 
   .welcome-modal-container {
@@ -86,8 +85,7 @@ $black: #161616;
   .videoTag {
     width: 25em;
     height: 25em;
-        animation: zoominvid 1s, fadein 2s;
-    background-color: #637750;
+    animation: zoominvid 1s, fadein 2s;
   }
 
   .welcome-modal-container {
@@ -215,7 +213,6 @@ $black: #161616;
     width: 30em;
     height: 30em;
     animation: zoominvid 1s, fadein 2s;
-    background-color: #637750;
   }
 
   .welcome-modal-container {
