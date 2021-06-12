@@ -11,7 +11,7 @@ import Ryker from "assets/images/characters/Ryker.jpg";
 import Aurora from "assets/images/characters/Aurora.jpg";
 import Asa from "assets/images/characters/Asa.jpg";
 import Hunter from "assets/images/characters/Hunter.jpg";
-
+import Mysterious from "assets/images/characters/Mysterious.jpg";
 export const characterData = {
   MAGGIE: {
     name: "Maggie",
@@ -85,7 +85,7 @@ export const characterData = {
   },
   MYSTERIOUS: {
     name: "Nhân tố bí ẩn",
-    img: Asa,
+    img: Mysterious,
     description: `Khác với những kết quả khác, bạn đã trở thành một nhân tố độc đáo có một không hai trong bộ truyện! Không cần phải hóa thân thành nhân vật nào mà bạn chắc chắn vẫn sẽ tỏa sáng trong “Bữa tiệc sân cỏ” Hãy thỏa sức sáng tạo và đặt mình vào khung cảnh thời cấp 3 với nhiều kỉ niệm đẹp!\n\nCùng đón đọc bộ sách “Bữa tiệc sân cỏ” với cuốn đầu tiên “Chờ tới đêm thứ sáu” phát hành ngày 15 tháng 7 năm 2021 nhé!`,
   },
 };
