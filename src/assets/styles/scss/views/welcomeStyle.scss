@@ -22,6 +22,8 @@ $black: #161616;
   .videoTag {
     width: 80vw;
     height: 80vw;
+    border-radius: 100%;
+    margin: 20px;
   }
 
   .welcome-modal-container {
@@ -86,6 +88,8 @@ $black: #161616;
     width: 25em;
     height: 25em;
     animation: zoominvid 1s, fadein 2s;
+    border-radius: 100%;
+    margin: 30px;
   }
 
   .welcome-modal-container {
@@ -213,6 +217,8 @@ $black: #161616;
     width: 30em;
     height: 30em;
     animation: zoominvid 1s, fadein 2s;
+    border-radius: 100%;
+    margin: 50px;
   }
 
   .welcome-modal-container {
