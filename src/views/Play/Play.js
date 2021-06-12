@@ -67,8 +67,6 @@ export default class Play extends React.Component {
       this.getResult();
       this.setState({ index: index + 1 });
     }
-    console.log(answerList)
-    console.log(answerCount)
   };
 
   getResult = () => {
