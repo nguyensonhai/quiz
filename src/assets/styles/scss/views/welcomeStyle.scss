@@ -8,8 +8,7 @@ $heavyPrimary: #2d1907;
 $white: #fbf9fa;
 $black: #161616;
 
-
-@media (min-width:0px) {
+@media (min-width: 0px) {
   .welcome-container {
     background-color: $primary;
     min-width: 100vw;
@@ -38,7 +37,7 @@ $black: #161616;
   }
 
   .welcome-modal-title-text {
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: "Quicksand";
     font-weight: 700;
     color: $white;
@@ -47,7 +46,7 @@ $black: #161616;
   }
 
   .welcome-modal-title-sub-text {
-    font-size: 0.8em;
+    font-size: 1.2em;
     font-family: "Quicksand";
     font-weight: 100;
     color: $white;
@@ -57,7 +56,7 @@ $black: #161616;
 
   .button-start {
     padding: 0.2em 2em 0.2em 2em;
-    font-size: 0.8em;
+    font-size: 1.2em;
     font-family: "Quicksand";
     font-weight: 900;
     text-transform: uppercase;
@@ -74,7 +73,7 @@ $black: #161616;
   }
 }
 
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   .welcome-container {
     background-color: $primary;
     min-width: 100vw;
@@ -85,8 +84,8 @@ $black: #161616;
   }
 
   .videoTag {
-    width: 25em;
-    height: 25em;
+    width: 20em;
+    height: 20em;
     animation: zoominvid 1s, fadein 2s;
     border-radius: 100%;
     margin: 30px;
@@ -113,7 +112,7 @@ $black: #161616;
     color: $white;
     text-align: center;
     max-width: 90%;
-        animation: fadein 1s, titlezoomin 1s;
+    animation: fadein 1s, titlezoomin 1s;
   }
 
   .welcome-modal-title-sub-text {
@@ -123,7 +122,7 @@ $black: #161616;
     color: $white;
     text-align: center;
     max-width: 90%;
-        animation: fadein 1s, subtitlezoomin 1s;
+    animation: fadein 1s, subtitlezoomin 1s;
   }
 
   .button-start {
@@ -136,7 +135,7 @@ $black: #161616;
     background-color: $heavyPrimary;
     color: $white;
     transition: transform 0.2s;
-        animation: fadein 2s;
+    animation: fadein 2s;
   }
 
   .button-start:hover {
@@ -187,8 +186,8 @@ $black: #161616;
       height: 0vh;
     }
     to {
-    width: 75vw;
-    height: 85vh;
+      width: 75vw;
+      height: 85vh;
     }
   }
 
@@ -198,14 +197,13 @@ $black: #161616;
       height: 0vh;
     }
     to {
-      width: 25em;
-      height: 25em;
+      width: 20em;
+      height: 20em;
     }
   }
 }
 
-
-@media (min-width:1800px) {
+@media (min-width: 1800px) {
   .welcome-container {
     background-color: $primary;
     min-width: 100vw;

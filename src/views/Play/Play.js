@@ -2,6 +2,8 @@ import React from "react";
 import "assets/styles/scss/views/playStyle.scss";
 import { quizData } from "data/quizData";
 import { characterData } from "data/characterData";
+import sample from "assets/videos/ball.mp4";
+
 export default class Play extends React.Component {
   state = {
     questionData: quizData,
@@ -28,6 +30,7 @@ export default class Play extends React.Component {
       HUNTER: "Hunter",
     },
     finalResult: {},
+    isResultVisible: false,
   };
 
   onSelectAnswer = (selectedAnswer) => {
@@ -65,10 +68,12 @@ export default class Play extends React.Component {
       this.setState({ index: index + 1 });
     } else {
       this.getResult();
+      setTimeout(() => {
+        this.setState({ isResultVisible: true });
+      }, 1000);
       this.setState({ index: index + 1 });
     }
   };
-
 
   getResult = () => {
     const answerCount = this.state.answerCount;
@@ -110,7 +115,7 @@ export default class Play extends React.Component {
   };
 
   render() {
-    const finalResult = this.state.finalResult
+    const finalResult = this.state.finalResult;
 
     const questionData = this.state.questionData;
 
@@ -159,12 +164,10 @@ export default class Play extends React.Component {
               </div>
             )}
           </div>
-        ) : (
+        ) : this.state.isResultVisible ? (
           <div className="character-modal-container">
             <div className="character-info-container">
-              <img src={finalResult.img}
-                className="characterImg"
-              />
+              <img src={finalResult.img} className="characterImg" />
               <div className="character-text-container">
                 <div className="character-name-container">
                   <span className="character-name">
@@ -176,9 +179,15 @@ export default class Play extends React.Component {
                 </span>
               </div>
             </div>
-            <a href="/" className="button-restart" >
+            <a href="/" className="button-restart">
               Thử lại
             </a>
+          </div>
+        ) : (
+          <div div className="character-modal-container">
+            <video className="videoTag" autoPlay loop muted>
+              <source src={sample} type="video/mp4" />
+            </video>
           </div>
         )}
       </div>

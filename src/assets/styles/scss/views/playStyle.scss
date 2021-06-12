@@ -30,10 +30,17 @@ $black: #161616;
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .videoResult {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 100%;
+    margin: 20px;
+  }
   .question-text {
     font-family: "Quicksand";
     font-weight: 900;
-    font-size: 1em;
+    font-size: 1.4em;
     margin-bottom: 0.5em;
     color: $white;
     text-transform: uppercase;
@@ -51,7 +58,7 @@ $black: #161616;
   }
   .answer-text {
     font-family: "Quicksand";
-    font-size: 1em;
+    font-size: 1.2em;
     color: $white;
   }
   .character-modal-container {
@@ -84,7 +91,7 @@ $black: #161616;
   }
   .character-description-text {
     font-family: "Quicksand";
-    font-size: 0.7em;
+    font-size: 0.9em;
     color: $white;
     float: right;
     text-align: justify;
@@ -103,7 +110,7 @@ $black: #161616;
   .character-name {
     font-family: "Quicksand";
     font-weight: 900;
-    font-size: 1em;
+    font-size: 1.4em;
     margin-bottom: 1em;
     color: $white;
     text-transform: uppercase;
@@ -111,7 +118,7 @@ $black: #161616;
   }
   .button-restart {
     padding: 0.2em 2em 0.2em 2em;
-    font-size: 1em;
+    font-size: 1.2em;
     font-family: "Quicksand";
     font-weight: 900;
     text-transform: uppercase;
@@ -144,6 +151,14 @@ $black: #161616;
     flex-direction: column;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .videoResult {
+    width: 12em;
+    height: 12em;
+    border-radius: 100%;
+    margin: 30px;
+    background-color: transparent;
+    opacity: 1;
   }
   .question-text {
     font-family: "Quicksand";
@@ -279,6 +294,12 @@ $black: #161616;
     text-transform: uppercase;
     max-width: 90%;
     text-align: center;
+  }
+  .videoResult {
+    width: 15em;
+    height: 15em;
+    border-radius: 100%;
+    margin: 50px;
   }
   .answer-button {
     padding: 1em;
