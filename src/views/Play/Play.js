@@ -166,15 +166,15 @@ export default class Play extends React.Component {
         ) : this.state.isResultVisible ? (
           <div className="character-modal-container">
             <div className="character-info-container">
-              <img src={finalResult.img} className="characterImg" />
+              <img src={finalResult?.img} className="characterImg" alt="" />
               <div className="character-text-container">
                 <div className="character-name-container">
                   <span className="character-name">
-                    Bạn là {finalResult.name}
+                    Bạn là {finalResult?.name}
                   </span>
                 </div>
                 <p className="character-description-text">
-                  {finalResult.description}
+                  {finalResult?.description}
                 </p>
               </div>
             </div>
