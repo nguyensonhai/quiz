@@ -189,4 +189,23 @@ export const quizData = [
       },
     ],
   },
+  {
+    id: 10,
+    text: "Giới tính của bạn?	",
+    choose: "",
+    answers: [
+      {
+        alphabet: "A",
+        text: "Nam",
+      },
+      {
+        alphabet: "B",
+        text: "Nữ",
+      },
+      {
+        alphabet: "C",
+        text: null,
+      },
+    ],
+  },
 ];

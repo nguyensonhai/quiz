@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "assets/styles/scss/views/playStyle.scss";
 import { quizData } from "data/quizData";
 
@@ -39,32 +39,36 @@ export default class Play extends React.Component {
 
     const answerCount = this.state.answerCount;
 
-    answerList.push(selectedAnswer);
+    if (index < questionData.length - 1) {
+      answerList.push(selectedAnswer);
 
-    switch (selectedAnswer) {
-      case "A":
-        answerCount.A = answerCount.A + 1;
-        break;
-      case "B":
-        answerCount.B = answerCount.B + 1;
-        break;
-      case "C":
-        answerCount.C = answerCount.C + 1;
-        break;
-      default:
-        break;
+      switch (selectedAnswer) {
+        case "A":
+          answerCount.A = answerCount.A + 1;
+          break;
+        case "B":
+          answerCount.B = answerCount.B + 1;
+          break;
+        case "C":
+          answerCount.C = answerCount.C + 1;
+          break;
+        default:
+          break;
+      }
+
+      questionData[index].selectedAnswer = selectedAnswer;
+
+      this.setState({ questionData, answerCount, answerList });
     }
 
-    questionData[index].selectedAnswer = selectedAnswer;
-
-    this.setState({ questionData, answerCount, answerList });
-
-    if (index < 9) {
+    if (index < questionData.length - 1) {
       this.setState({ index: index + 1 });
     } else {
       this.getResult();
       this.setState({ index: index + 1 });
     }
+    console.log(answerList)
+    console.log(answerCount)
   };
 
   getResult = () => {
@@ -113,7 +117,7 @@ export default class Play extends React.Component {
 
     return (
       <div className="play-container">
-        {this.state.index < 10 ? (
+        {this.state.index <= questionData.length - 1 ? (
           <div className="play-modal-container">
             <span className="question-text">
               {index + 1}. {questionData[index].text}

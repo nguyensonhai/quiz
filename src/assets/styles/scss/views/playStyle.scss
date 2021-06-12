@@ -2,12 +2,125 @@
 
 $primary: #3e160c;
 $secondary: #42582a;
-$lightSecondary: #637750;
+$lightSecondary: #6f815a;
 $gray: #4d5b5b;
 $heavyPrimary: #2d1907;
 $white: #fbf9fa;
 $black: #161616;
 
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+$primary: #3e160c;
+$secondary: #42582a;
+$lightSecondary: #6f815a;
+$gray: #4d5b5b;
+$heavyPrimary: #2d1907;
+$white: #fbf9fa;
+$black: #161616;
+
+@media (min-width:0) {
+    .play-container {
+    background-color: $primary;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .play-modal-container {
+    background-color: $lightSecondary;
+    width: 90vw;
+    height: 90vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .question-text {
+    font-family: "Quicksand";
+    font-weight: 900;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    color: $white;
+    text-transform: uppercase;
+    max-width: 90%;
+    text-align: center;
+  }
+  .answer-button {
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0.3em;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    max-width: 90%;
+    text-align: center;
+  }
+  .answer-text {
+    font-family: "Quicksand";
+    font-size: 0.8em;
+    color: $white;
+  }
+
+}
+
+@media (min-width:1200px) {
+
+  .play-container {
+    background-color: $primary;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .play-modal-container {
+    background-color: $lightSecondary;
+    width: 90vw;
+    height: 90vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .question-text {
+    font-family: "Quicksand";
+    font-weight: 900;
+    font-size: 1.7em;
+    margin-bottom: 1em;
+    color: $white;
+    text-transform: uppercase;
+    max-width: 90%;
+    text-align: center;
+  }
+  .answer-button {
+    padding: 0.7em;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0.7em;
+    border-radius: 20px;
+    transition: transform 0.2s;
+    max-width: 90%;
+    text-align: center;
+  }
+  .answer-button:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+  }
+  .answer-text {
+    font-family: "Quicksand";
+    font-size: 1.5em;
+    color: $white;
+    text-align: center;
+  }
+}
+@media (min-width:1800px) {
 .play-container {
   background-color: $primary;
   min-width: 100vw;
@@ -37,6 +150,8 @@ $black: #161616;
   margin-bottom: 1.5em;
   color: $white;
   text-transform: uppercase;
+  max-width: 90%;
+  text-align: center;
 }
 .answer-button {
   padding: 1em;
@@ -44,6 +159,7 @@ $black: #161616;
   margin: 1em;
   border-radius: 30px;
   transition: transform 0.2s;
+  max-width: 90%;
 }
 .answer-button:hover {
   transform: scale(1.05);
@@ -53,4 +169,6 @@ $black: #161616;
   font-family: "Quicksand";
   font-size: 2em;
   color: $white;
+  text-align: center;
+}
 }
