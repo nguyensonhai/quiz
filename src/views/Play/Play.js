@@ -78,8 +78,7 @@ export default class Play extends React.Component {
   getResult = () => {
     const answerCount = this.state.answerCount;
     const answerList = this.state.answerList;
-    const result = this.state.result;
-    let tempResult = "";
+    let tempResult = null;
     if (answerCount.A >= 9) {
       tempResult = characterData.MAGGIE;
     } else if (answerCount.B >= 8) {
