@@ -1,7 +1,7 @@
 import React from "react";
 import "assets/styles/scss/views/playStyle.scss";
 import { quizData } from "data/quizData";
-
+import { characterData } from "data/characterData";
 export default class Play extends React.Component {
   state = {
     questionData: quizData,
@@ -27,7 +27,7 @@ export default class Play extends React.Component {
       ASA: "Asa",
       HUNTER: "Hunter",
     },
-    finalResult: "",
+    finalResult: {},
   };
 
   onSelectAnswer = (selectedAnswer) => {
@@ -69,46 +69,49 @@ export default class Play extends React.Component {
     }
   };
 
+
   getResult = () => {
     const answerCount = this.state.answerCount;
     const answerList = this.state.answerList;
     const result = this.state.result;
     let tempResult = "";
     if (answerCount.A >= 9) {
-      tempResult = `You are ${result.MAGGIE}`;
+      tempResult = characterData.MAGGIE;
     } else if (answerCount.B >= 8) {
-      tempResult = `You are ${result.WEST}`;
+      tempResult = characterData.WEST;
     } else if (answerCount.C === 6) {
-      tempResult = `You are ${result.RALEIGH}`;
+      tempResult = characterData.RALEIGH;
     } else if (answerCount.A === 5 || answerCount.A === 4) {
-      tempResult = `You are ${result.BRADY}`;
+      tempResult = characterData.BRADY;
     } else if (answerCount.B === 7) {
-      tempResult = `You are ${result.GUNNER}`;
+      tempResult = characterData.GUNNER;
     } else if (answerCount.C === 4) {
-      tempResult = `You are ${result.WILLA}`;
+      tempResult = characterData.WILLA;
     } else if (answerCount.A === 6) {
-      tempResult = `You are ${result.RILEY}`;
+      tempResult = characterData.RILEY;
     } else if (answerCount.C === 3) {
-      tempResult = `You are ${result.NASH}`;
+      tempResult = characterData.NASH;
     } else if (answerCount.A === 8 || answerCount.A === 7) {
-      tempResult = `You are ${result.TALLULAH}`;
+      tempResult = characterData.TALLULAH;
     } else if (answerCount.B === 6) {
-      tempResult = `You are ${result.RYKER}`;
+      tempResult = characterData.RYKER;
     } else if (answerCount.A === 4 || answerCount.A === 5) {
-      tempResult = `You are ${result.AURORA}`;
+      tempResult = characterData.AURORA;
     } else if (answerCount.B === 4 || answerCount.B === 5) {
       if (answerList[4] === "B") {
-        tempResult = `You are ${result.ASA}`;
+        tempResult = characterData.ASA;
       } else if (answerList[4] === "C") {
-        tempResult = `You are ${result.HUNTER}`;
+        tempResult = characterData.HUNTER;
       }
     } else {
-      tempResult = "You are a alien";
+      tempResult = characterData.MYSTERIOUS;
     }
     this.setState({ finalResult: tempResult });
   };
 
   render() {
+    const finalResult = this.state.finalResult
+
     const questionData = this.state.questionData;
 
     const index = this.state.index;
@@ -157,8 +160,25 @@ export default class Play extends React.Component {
             )}
           </div>
         ) : (
-          <div className="play-modal-container">
-            <span className="question-text">{this.state.finalResult}</span>
+          <div className="character-modal-container">
+            <div className="character-info-container">
+              <img src={finalResult.img}
+                className="characterImg"
+              />
+              <div className="character-text-container">
+                <div className="character-name-container">
+                  <span className="character-name">
+                    Bạn là {finalResult.name}
+                  </span>
+                </div>
+                <span className="character-description-text">
+                  "{finalResult.description}"
+                </span>
+              </div>
+            </div>
+            <a href="/" className="button-restart" >
+              Thử lại
+            </a>
           </div>
         )}
       </div>
