@@ -42,9 +42,10 @@ export default class Play extends React.Component {
 
     const answerCount = this.state.answerCount;
 
-    if (index < questionData.length - 1) {
-      answerList.push(selectedAnswer);
+    let tempResult;
 
+    if (index < questionData.length) {
+      answerList.push(selectedAnswer);
       switch (selectedAnswer) {
         case "A":
           answerCount.A = answerCount.A + 1;
@@ -58,20 +59,39 @@ export default class Play extends React.Component {
         default:
           break;
       }
-
-      questionData[index].selectedAnswer = selectedAnswer;
-
-      this.setState({ questionData, answerCount, answerList });
+      this.setState({ answerCount, answerList });
     }
 
-    if (index < questionData.length - 1) {
+    questionData[index].selectedAnswer = selectedAnswer;
+    this.setState({ questionData });
+
+    if (index < questionData.length - 2) {
       this.setState({ index: index + 1 });
     } else {
-      this.getResult();
+      tempResult = this.getResult();
+      this.setState({ finalResult: tempResult });
+    }
+    if (index === questionData.length - 2) {
+      if (tempResult.name === characterData.BRADY.name) {
+        this.setState({ index: index + 1 });
+      } else {
+        this.setState({ index: index + 2 });
+        setTimeout(() => {
+          this.setState({ isResultVisible: true });
+        }, 1500);
+      }
+    }
+    console.log("🚀 ~ file: Play.js ~ line 86 ~ Play ~ answerList", answerList);
+    if (index === questionData.length - 1) {
+      if (answerList[questionData.length - 1] === "A") {
+        this.setState({ finalResult: characterData.BRADY });
+      } else {
+        this.setState({ finalResult: characterData.AURORA });
+      }
+      this.setState({ index: index + 1 });
       setTimeout(() => {
         this.setState({ isResultVisible: true });
       }, 1500);
-      this.setState({ index: index + 1 });
     }
   };
 
@@ -99,8 +119,6 @@ export default class Play extends React.Component {
       tempResult = characterData.TALLULAH;
     } else if (answerCount.B === 6) {
       tempResult = characterData.RYKER;
-    } else if (answerCount.A === 4 || answerCount.A === 5) {
-      tempResult = characterData.AURORA;
     } else if (answerCount.B === 4 || answerCount.B === 5) {
       if (answerList[4] === "B") {
         tempResult = characterData.ASA;
@@ -110,7 +128,7 @@ export default class Play extends React.Component {
     } else {
       tempResult = characterData.MYSTERIOUS;
     }
-    this.setState({ finalResult: tempResult });
+    return tempResult;
   };
 
   render() {
@@ -122,7 +140,7 @@ export default class Play extends React.Component {
 
     return (
       <div className="play-container">
-        {this.state.index <= questionData.length - 1 ? (
+        {this.state.index < questionData.length ? (
           <div className="play-modal-container">
             <span className="question-text">
               {index + 1}. {questionData[index].text}
