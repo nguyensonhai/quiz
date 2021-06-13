@@ -81,7 +81,6 @@ export default class Play extends React.Component {
         }, 1500);
       }
     }
-    console.log("🚀 ~ file: Play.js ~ line 86 ~ Play ~ answerList", answerList);
     if (index === questionData.length - 1) {
       if (answerList[questionData.length - 1] === "A") {
         this.setState({ finalResult: characterData.BRADY });
